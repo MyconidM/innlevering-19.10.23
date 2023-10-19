@@ -9,12 +9,12 @@ const navigation = [
     href: "/",
   },
   {
-    label: "Info",
+    label: "Sjødyr",
     href: "/Info",
   },
   {
-    label: "Oppgaver",
-    href: "/challenges",
+    label: "Legg Til Sjødyr",
+    href: "/AddCreature",
   }
 ]
 
@@ -26,7 +26,7 @@ export default function NavBar() {
     }
   
     return (
-      <nav className="mb-6 flex gap-2">
+      <nav className="mb-6 flex gap-10 p-5 px-10">
         {navigation.map((item) => (
           <Link
             key={item.href}

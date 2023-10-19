@@ -1,6 +1,7 @@
-export type creatureInfo = {
-    id: "number"
-    title: "string"
-    sort: "string"
-    shortInfo: "string"
+export type CreatureInfo = {
+    id: string
+    title: string
+    image: string
+    sort: string
+    shortInfo: string
 }

@@ -25,3 +25,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.ItemConteiner {
+  max-width: 310px;
+  height: fit-content;
+  padding: 7px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: rgb(44, 44, 44);
+}
+
+.conteiner{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
