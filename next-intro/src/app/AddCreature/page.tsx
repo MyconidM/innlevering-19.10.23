@@ -8,24 +8,24 @@ const AddCreature = () => {
     const [seaCreatures, setSeaCreatures] = useState<CreatureInfo[]>([])
     const [newCreature, setNewCreature] = useState({ id: "", title: "", image: "", sort: "", shortInfo: ""  })
 
-    // useEffect(() => {
-    //     // Using async/await to be able to handle the promise coming from fetch
-    //     const getSeaCreatures = async () => {
-    //     // Using fetch and the url matchin folder (api/SeaCreatures/route.ts)
-    //     // Using get since that is what this route handles
-    //     const response = await fetch("/api/seacreatures", {
-    //         method: "get",
-    //     })
+    useEffect(() => {
+        // Using async/await to be able to handle the promise coming from fetch
+        const getSeaCreatures = async () => {
+        // Using fetch and the url matchin folder (api/SeaCreatures/route.ts)
+        // Using get since that is what this route handles
+        const response = await fetch("/api/seacreatures", {
+            method: "get",
+        })
 
-    //     // Using a built in method on the fetch-response that converts the "stream" to JSON (object-like data)
-    //     const result = (await response.json()) as { data: CreatureInfo[] }
-    //     // Using the state-setter to update the state after component is mounted
-    //     setSeaCreatures(result.data)
-    //     }
+        // Using a built in method on the fetch-response that converts the "stream" to JSON (object-like data)
+        const result = (await response.json()) as { data: CreatureInfo[] }
+        // Using the state-setter to update the state after component is mounted
+        setSeaCreatures(result.data)
+        }
 
-    //     // Call the fetch function
-    //     getSeaCreatures()
-    // }, [])
+        // Call the fetch function
+        getSeaCreatures()
+    }, [])
 
     const creatureId = () => {
         const creatureAmount = seaCreatures.length +1;

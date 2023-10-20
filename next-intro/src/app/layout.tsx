@@ -3,6 +3,8 @@ import './globals.css'
 import type { Metadata } from "next"
 import { Inter } from 'next/font/google'
 import NavBar from './components/NavBar'
+import { useState } from 'react'
+import { CreatureInfo } from './features/seacreatures/types'
 
 const inter = Inter({ subsets: ["latin"] })
 
